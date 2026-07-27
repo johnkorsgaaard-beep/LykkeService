@@ -1,0 +1,146 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 140" fill="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="leafA" x1="20" y1="30" x2="110" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#9FD46A"/>
+      <stop offset="45%" stop-color="#5FB047"/>
+      <stop offset="100%" stop-color="#3D8B2E"/>
+    </linearGradient>
+    <linearGradient id="leafB" x1="90" y1="10" x2="170" y2="90" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#B4E07A"/>
+      <stop offset="40%" stop-color="#6EC04F"/>
+      <stop offset="100%" stop-color="#4A9A38"/>
+    </linearGradient>
+    <linearGradient id="leafC" x1="70" y1="50" x2="160" y2="130" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#8BC95A"/>
+      <stop offset="50%" stop-color="#57A843"/>
+      <stop offset="100%" stop-color="#357A28"/>
+    </linearGradient>
+    <linearGradient id="stemGrad" x1="95" y1="20" x2="85" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6BB84A"/>
+      <stop offset="100%" stop-color="#3F8A30"/>
+    </linearGradient>
+    <radialGradient id="leafShine" cx="40%" cy="30%" r="55%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.35"/>
+      <stop offset="55%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="leafShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="1.5" dy="3" stdDeviation="2.5" flood-color="#0a1a10" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#leafShadow)">
+    <!-- stem -->
+    <path
+      d="M98 28c-2.5 18-6 38-12 58c4-2 9-5 14-10c3-8 6-22 7-36c-2.5 1.5-5.5 1-9-2z"
+      fill="url(#stemGrad)"
+      opacity="0.9"
+    />
+
+    <!-- left lower leaf -->
+    <g class="leaf-part leaf-left">
+      <path
+        d="M86 72
+           C68 70 46 78 28 98
+           C24 104 22 112 24 118
+           C42 112 62 100 80 86
+           C88 80 92 74 86 72Z"
+        fill="url(#leafA)"
+      />
+      <path
+        d="M86 72
+           C68 70 46 78 28 98
+           C24 104 22 112 24 118
+           C42 112 62 100 80 86
+           C88 80 92 74 86 72Z"
+        fill="url(#leafShine)"
+      />
+      <path
+        d="M82 76 C68 84 52 96 36 110"
+        stroke="#2F6F24"
+        stroke-width="1.4"
+        stroke-linecap="round"
+        opacity="0.55"
+      />
+      <path
+        d="M72 84 C64 90 56 98 48 106
+           M66 90 C60 94 54 100 48 104"
+        stroke="#3D8B2E"
+        stroke-width="0.9"
+        stroke-linecap="round"
+        opacity="0.4"
+      />
+    </g>
+
+    <!-- top right leaf -->
+    <g class="leaf-part leaf-top">
+      <path
+        d="M104 34
+           C118 18 142 10 168 16
+           C176 18 180 24 178 32
+           C160 36 136 48 116 62
+           C108 68 100 52 104 34Z"
+        fill="url(#leafB)"
+      />
+      <path
+        d="M104 34
+           C118 18 142 10 168 16
+           C176 18 180 24 178 32
+           C160 36 136 48 116 62
+           C108 68 100 52 104 34Z"
+        fill="url(#leafShine)"
+      />
+      <path
+        d="M108 38 C128 28 148 24 168 24"
+        stroke="#2F6F24"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        opacity="0.5"
+      />
+      <path
+        d="M118 42 C128 36 140 32 152 30
+           M124 48 C134 42 146 38 156 36
+           M130 54 C138 50 148 46 156 44"
+        stroke="#3D8B2E"
+        stroke-width="0.85"
+        stroke-linecap="round"
+        opacity="0.38"
+      />
+    </g>
+
+    <!-- right lower leaf -->
+    <g class="leaf-part leaf-right">
+      <path
+        d="M102 78
+           C120 72 144 78 164 100
+           C170 108 172 116 168 122
+           C148 114 124 98 106 86
+           C98 80 96 82 102 78Z"
+        fill="url(#leafC)"
+      />
+      <path
+        d="M102 78
+           C120 72 144 78 164 100
+           C170 108 172 116 168 122
+           C148 114 124 98 106 86
+           C98 80 96 82 102 78Z"
+        fill="url(#leafShine)"
+      />
+      <path
+        d="M106 82 C124 88 142 100 158 114"
+        stroke="#2F6F24"
+        stroke-width="1.4"
+        stroke-linecap="round"
+        opacity="0.55"
+      />
+      <path
+        d="M114 88 C126 94 138 104 148 112
+           M118 96 C128 102 138 110 146 116"
+        stroke="#3D8B2E"
+        stroke-width="0.9"
+        stroke-linecap="round"
+        opacity="0.4"
+      />
+    </g>
+  </g>
+</svg>
