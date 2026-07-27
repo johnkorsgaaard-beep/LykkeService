@@ -1251,7 +1251,7 @@ img {
 
 .why-cta {
   position: relative;
-  min-height: 420px;
+  min-height: 520px;
   border-radius: 22px;
   overflow: hidden;
   background: #0a1e31;
@@ -1264,24 +1264,28 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 40%;
+  object-position: center 18%;
   z-index: 0;
 }
 
-/* Soft white veil: strong on left, clears to sharp garden on right */
+.why-cta-marc {
+  object-position: 68% 12%;
+}
+
+/* Soft white veil: form left, Marc clear on the right */
 .why-cta-wash {
   position: absolute;
   inset: 0;
   z-index: 1;
   pointer-events: none;
   background: linear-gradient(
-    100deg,
+    105deg,
     rgba(247, 248, 250, 0.98) 0%,
-    rgba(247, 248, 250, 0.96) 34%,
-    rgba(247, 248, 250, 0.78) 52%,
-    rgba(247, 248, 250, 0.32) 68%,
-    rgba(247, 248, 250, 0.06) 82%,
-    rgba(247, 248, 250, 0) 92%
+    rgba(247, 248, 250, 0.97) 38%,
+    rgba(247, 248, 250, 0.82) 52%,
+    rgba(247, 248, 250, 0.28) 64%,
+    rgba(247, 248, 250, 0.05) 74%,
+    rgba(7, 23, 44, 0.12) 100%
   );
 }
 
@@ -1289,7 +1293,7 @@ img {
   position: absolute;
   top: -8%;
   bottom: -8%;
-  left: 58%;
+  left: 56%;
   width: 14px;
   z-index: 2;
   background: var(--green);
@@ -1312,10 +1316,40 @@ img {
   );
 }
 
+.why-cta-portrait-meta {
+  position: absolute;
+  right: 28px;
+  bottom: 28px;
+  z-index: 3;
+  max-width: 240px;
+  padding: 12px 16px;
+  border-radius: 12px;
+  background: rgba(7, 23, 44, 0.82);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+}
+
+.why-cta-portrait-meta strong {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.why-cta-portrait-meta span {
+  display: block;
+  margin-top: 3px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #8fd16a;
+}
+
 .why-cta-content {
   position: relative;
   z-index: 3;
-  width: min(560px, 62%);
+  width: min(540px, 54%);
   padding: 40px 36px 36px;
   color: #0a1e31;
 }
@@ -1681,31 +1715,53 @@ img {
 
   .why-cta-content {
     width: 100%;
-    padding: 28px 22px 200px;
+    padding: 28px 22px 36px;
   }
 
-  .booking-grid {
-    grid-template-columns: 1fr;
+  .why-cta-marc {
+    position: relative;
+    inset: auto;
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: center 15%;
+    order: -1;
+  }
+
+  .why-cta {
+    display: flex;
+    flex-direction: column;
   }
 
   .why-cta-wash {
     background: linear-gradient(
       180deg,
-      rgba(247, 248, 250, 0.97) 0%,
-      rgba(247, 248, 250, 0.92) 42%,
-      rgba(247, 248, 250, 0.4) 68%,
-      rgba(247, 248, 250, 0) 88%
+      rgba(247, 248, 250, 0) 0%,
+      rgba(247, 248, 250, 0.55) 18%,
+      rgba(247, 248, 250, 0.97) 34%,
+      rgba(247, 248, 250, 0.99) 100%
     );
   }
 
   .why-cta-stripe {
     left: auto;
-    right: 18%;
-    top: 52%;
+    right: 12%;
+    top: 248px;
     bottom: auto;
-    width: 70%;
-    height: 12px;
+    width: 72%;
+    height: 10px;
     transform: skewX(-18deg);
+  }
+
+  .why-cta-portrait-meta {
+    top: 196px;
+    right: 16px;
+    bottom: auto;
+  }
+
+  .booking-grid {
+    grid-template-columns: 1fr;
   }
 }
 
