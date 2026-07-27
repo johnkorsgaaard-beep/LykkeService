@@ -1,9 +1,10 @@
 /* ========== MOTION — soft fades (transitions, not hard keyframe snaps) ========== */
 
 :root {
-  --ease-fade: cubic-bezier(0.33, 0.1, 0.25, 1);
+  --ease-fade: cubic-bezier(0.22, 0.61, 0.36, 1);
   --ease-soft: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  --dur-fade: 1.15s;
+  --dur-fade: 2s;
+  --dur-fade-move: 1.85s;
 }
 
 .scroll-progress {
@@ -46,7 +47,7 @@ html.motion-ready:not(.motion-reduce) .hero:not(.is-hero-in) .hero-actions .btn 
 html.motion-ready:not(.motion-reduce) .hero h1,
 html.motion-ready:not(.motion-reduce) .hero .hero-text,
 html.motion-ready:not(.motion-reduce) .hero .hero-actions .btn {
-  transition: opacity 1.25s var(--ease-fade), transform 1.25s var(--ease-fade);
+  transition: opacity 1.8s var(--ease-fade), transform 1.7s var(--ease-fade);
 }
 
 html.motion-ready:not(.motion-reduce) .hero.is-hero-in h1 {
@@ -73,28 +74,28 @@ html.motion-ready:not(.motion-reduce) .hero.is-hero-in .hero-actions .btn:nth-ch
   transition-delay: 0.42s;
 }
 
-/* ---------- SCROLL REVEALS — fade + tiny lift (transition-based) ---------- */
+/* ---------- SCROLL REVEALS — long soft fade + whisper of lift ---------- */
 html.motion-ready:not(.motion-reduce) .reveal:not(.is-in) {
   opacity: 0;
-  transform: translate3d(0, 16px, 0);
+  transform: translate3d(0, 12px, 0);
 }
 
 html.motion-ready:not(.motion-reduce) .reveal-left:not(.is-in) {
-  transform: translate3d(-14px, 10px, 0);
+  transform: translate3d(-10px, 8px, 0);
 }
 
 html.motion-ready:not(.motion-reduce) .reveal-right:not(.is-in) {
-  transform: translate3d(14px, 10px, 0);
+  transform: translate3d(10px, 8px, 0);
 }
 
 html.motion-ready:not(.motion-reduce) .reveal-scale:not(.is-in) {
-  transform: translate3d(0, 12px, 0) scale(0.985);
+  transform: translate3d(0, 10px, 0) scale(0.992);
 }
 
 html.motion-ready:not(.motion-reduce) .reveal {
   transition:
     opacity var(--dur-fade) var(--ease-fade),
-    transform var(--dur-fade) var(--ease-fade);
+    transform var(--dur-fade-move) var(--ease-fade);
   transition-delay: var(--reveal-delay, 0ms);
 }
 

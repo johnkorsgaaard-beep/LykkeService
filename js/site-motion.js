@@ -37,7 +37,7 @@
   revealPlan.forEach(([selector, type]) => {
     document.querySelectorAll(selector).forEach((el, i) => {
       el.classList.add("reveal", `reveal-${type}`);
-      el.style.setProperty("--reveal-delay", `${Math.min(i * 80, 480)}ms`);
+      el.style.setProperty("--reveal-delay", `${Math.min(i * 140, 700)}ms`);
       revealEls.push(el);
     });
   });
@@ -53,7 +53,8 @@
       const vh = window.innerHeight;
       revealEls.forEach((el) => {
         const r = el.getBoundingClientRect();
-        if (r.top < vh * 0.88 && r.bottom > 0) revealNow(el);
+        /* Only auto-reveal if clearly already on screen (hero/top) */
+        if (r.top < vh * 0.72 && r.bottom > 40) revealNow(el);
       });
 
       if ("IntersectionObserver" in window) {
@@ -65,7 +66,8 @@
               io.unobserve(entry.target);
             });
           },
-          { threshold: 0.12, rootMargin: "0px 0px -4% 0px" }
+          /* Start fade early as content enters — feels much softer */
+          { threshold: 0.06, rootMargin: "0px 0px 18% 0px" }
         );
         revealEls.forEach((el) => {
           if (!el.classList.contains("is-in")) io.observe(el);
