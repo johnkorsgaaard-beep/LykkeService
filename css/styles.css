@@ -647,7 +647,8 @@ img {
   min-height: 178px;
   height: 100%;
   margin-left: 34%;
-  padding: 18px 16px 14px 36px;
+  /* Diagonal cut = 18% of body width (≈12% of card); keep content clear of it */
+  padding: 18px 16px 14px calc(12% + 20px);
   background: transparent;
 }
 
@@ -1794,7 +1795,7 @@ img {
 
   .service-card-body {
     margin-left: 32%;
-    padding-left: 32px;
+    padding-left: calc(12.5% + 20px);
   }
 
   .values-banner {
