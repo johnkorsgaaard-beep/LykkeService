@@ -1,0 +1,12 @@
+{
+  "redirects": [
+    { "source": "/skadedyr", "destination": "/#ydelser", "permanent": true },
+    { "source": "/skadedyrsbekaempelse", "destination": "/#ydelser", "permanent": true },
+    { "source": "/vinduespudsning", "destination": "/#ydelser", "permanent": true },
+    { "source": "/fliserens", "destination": "/#ydelser", "permanent": true },
+    { "source": "/hvepsebo", "destination": "/#ydelser", "permanent": true },
+    { "source": "/assets/services/skadedyr.png", "destination": "/assets/services/hvepsebo.png", "permanent": true },
+    { "source": "/assets/services/vindue.png", "destination": "/assets/services/have.png", "permanent": true },
+    { "source": "/assets/services/fliser.png", "destination": "/assets/services/have.png", "permanent": true }
+  ]
+}
